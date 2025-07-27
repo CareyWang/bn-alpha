@@ -5,7 +5,7 @@ export function middleware(request: NextRequest) {
   if (request.nextUrl.pathname.startsWith('/api/')) {
     const origin = request.headers.get('origin')
     const referer = request.headers.get('referer')
-    const allowedDomains = ['http://localhost:3000', 'https://bn-alpha.site', 'https://www.bn-alpha.site']
+    const allowedDomains = ['http://localhost:3000', 'https://bn-alpha.site', 'https://www.bn-alpha.site', 'https://bn-alpha-ashy.vercel.app']
     const isValidOrigin = origin && allowedDomains.includes(origin)
     const isValidReferer = referer && allowedDomains.some(domain => referer.startsWith(domain))
 
